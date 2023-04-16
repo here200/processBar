@@ -10,9 +10,7 @@ const char* processBar(double current, double duration) {
 
     int index = 0;
     index += sprintf(_result, "%5.1lf", percent);
-    index += sprintf(&_result[index], "%c", '%');
-    index += sprintf(&_result[index], "%c", ' ');
-    index += sprintf(&_result[index], "%c", '[');
+    index += sprintf(&_result[index], "%s", "% [");
 
     int i = 0;
     for (; i < now; ++i) {
